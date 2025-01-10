@@ -6,11 +6,6 @@ import org.openqa.selenium.support.PageFactory;
 public class OrderHistoryPage {
     private static WebDriver driver;
 
-    //OrderConfirmationPage orderConfirmationPage = new OrderConfirmationPage(driver);
-
-    //String current1OrderReference = orderConfirmationPage.getOrderReference();
-    // @FindBy(xpath = "//th[contains(text(), '\" + currentOrderReference + \"')]/../td[4]")
-    //WebElement status;
     @FindBy(xpath = "//tr/td[4]")
     WebElement status;
 
@@ -20,7 +15,6 @@ public class OrderHistoryPage {
 
     public OrderHistoryPage(WebDriver driver) {
         this.driver = driver;
-
 
         PageFactory.initElements(driver, this);
     }

@@ -28,7 +28,7 @@ public class LoginPage {
 
     public String getLoggedUserName() {
         String userNameText = driver.findElement(By.xpath("//a[@class='account']")).getText();
-        System.out.println(userNameText);
+        // System.out.println(userNameText);
         return userNameText;
     }
 

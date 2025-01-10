@@ -74,7 +74,7 @@ public class ShopTest {
         orderConfirmationPage.screenShot();
 
         orderConfirmationPage.getOrderReference();
-        orderConfirmationPage.getTotalValue();
+        String expectedTotalValue = orderConfirmationPage.getTotalValue();
         loginPage.LoggedUserNameClick();
         yourAccountPage.orderHistoryAndDetailsClick();
 
@@ -82,19 +82,20 @@ public class ShopTest {
         String currentStatus = orderHistoryPage.orderStatus();
         Assert.assertEquals(expectedStatus, currentStatus);
 
-        //   String expectedTotalValue = orderConfirmationPage.getTotalValue();
-        //   String currentTotalValue = orderHistoryPage.totalPrice();
-        //   Assert.assertEquals(expectedTotalValue, currentTotalValue );
+
+        String currentTotalValue = orderHistoryPage.totalPrice();
+        Assert.assertEquals(expectedTotalValue, currentTotalValue);
 
 
     }
-    //    @After
-    //  public void close() {
-//        MainShopPage mainShopPage = new MainShopPage(driver);
-//        mainShopPage.signOut();
-//
-//        driver.quit();
-//    }
+
+    @After
+    public void close() {
+        MainShopPage mainShopPage = new MainShopPage(driver);
+        mainShopPage.signOut();
+
+        driver.quit();
+    }
 
 
 }

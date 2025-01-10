@@ -39,13 +39,13 @@ public class OrderConfirmationPage {
 
     public String getOrderReference() {
         String orderReferenceText = orderNumber.getText();
-        System.out.println(orderReferenceText);
+        // System.out.println(orderReferenceText);
         String[] parts = orderReferenceText.split("Order reference:");
         String currentOrderReference = " ";
         if (parts.length > 1) {
             String orderReference = parts[1];
             currentOrderReference = orderReference;
-            System.out.println(currentOrderReference);
+            //  System.out.println(currentOrderReference);
 
         }
         return currentOrderReference;
@@ -53,7 +53,7 @@ public class OrderConfirmationPage {
 
     public String getTotalValue() {
         String totalValue = total.getText();
-        System.out.println("total Value: " + totalValue);
+        // System.out.println("total Value: " + totalValue);
         return totalValue;
     }
 
