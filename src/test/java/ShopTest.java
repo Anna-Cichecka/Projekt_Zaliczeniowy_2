@@ -37,7 +37,7 @@ public class ShopTest {
 
 
     @Test
-    public void buiingProduct() throws IOException {
+    public void buyingProduct() throws IOException {
         MainShopPage mainShopPage = new MainShopPage(driver);
         LoginPage loginPage = new LoginPage(driver);
         MyStorePage myStorePage = new MyStorePage(driver);
